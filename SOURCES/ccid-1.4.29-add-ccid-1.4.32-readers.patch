@@ -1,0 +1,269 @@
+diff -up ./readers/supported_readers.txt.ccid-1-4-32 ./readers/supported_readers.txt
+--- ./readers/supported_readers.txt.ccid-1-4-32	2020-06-11 14:20:29.227303776 -0700
++++ ./readers/supported_readers.txt	2020-06-11 14:48:09.968252737 -0700
+@@ -125,19 +125,29 @@
+ 0x0DB5:0x0138:Access IS ePassport Reader
+ 0x0DB5:0x0160:Access IS NFC Smart Module
+ 0x0DB5:0x0164:Access IS NFC Smart Module
++0x0DB5:0x0170:Access IS ATR210
++0x0DB5:0x0180:Access IS ATR220
+ 
+ # ACS
+ 0x072F:0x1204:ACS ACR101 ICC Reader
+ 0x072F:0x221A:ACS ACR1251 Dual Reader
+ 0x072F:0x223B:ACS ACR1252 Dual Reader
++0x072F:0x223E:ACS ACR1252 Reader
+ 0x072F:0x223F:ACS ACR1255U-J1
+ 0x072F:0x8201:ACS APG8201 PINhandy 1
+ 0x072F:0x8202:ACS APG8201 USB Reader
++0x072F:0x8300:ACS ACR33 ICC Reader
+ 0x072F:0x90DB:ACS CryptoMate64
+ 0x072F:0xB000:ACS ACR3901U ICC Reader
+ 0x072F:0xB100:ACS ACR39U ICC Reader
+ 0x072F:0xB106:ACS CryptoMate (T2)
+ 
++# AF Care
++0x1C34:0xAFC0:AF Care One
++0x1C34:0xAFC1:AF Care One
++0x1C34:0xAFC2:AF Care Two
++0x1C34:0xAFC3:AF Care Two
++
+ # AK910
+ 0x2021:0x0001:AK910 CKey
+ 0x2021:0x0011:AK910 CKey
+@@ -161,9 +171,13 @@
+ 0x24DC:0x0201:Aladdin R.D. JCR-770
+ 0x24DC:0x0401:Aladdin R.D. JC-WebPass (JC600)
+ 0x24DC:0x0402:Aladdin R.D. JaCarta
++0x24DC:0x0428:Aladdin R.D. JaCartaReader
+ 0x24DC:0x0501:Aladdin R.D. JaCarta U2F (JC602)
+ 0x24DC:0x100F:Aladdin R.D. JaCarta Flash
+ 
++# Alcor Link
++0x2CE3:0x9563:Alcor Link AK9563
++
+ # Alcor Micro
+ 0x058F:0x9522:Alcor Micro AU9522
+ 
+@@ -192,9 +206,13 @@
+ 0x03EB:0x6012:ATMEL VaultIC420 Smart Object
+ 0x03EB:0x6014:ATMEL VaultIC440
+ 
++# AvestUA
++0xC1A6:0x0131:AvestUA AvestKey
++
+ # Avtor
+ 0x15CF:0x0019:Avtor SecureToken
+ 0x15CF:0x001D:Avtor SC Reader 371
++0x15CF:0x0020:Avtor SecureToken
+ 
+ # Axalto
+ 0x04E6:0x511C:Axalto Reflex USB v3
+@@ -203,6 +221,7 @@
+ 0x23A0:0x0001:BIFIT USB-Token iBank2key
+ 0x23A0:0x0002:BIFIT iBank2Key
+ 0x23A0:0x0003:BIFIT iToken
++0x23A0:0x0008:BIFIT ANGARA
+ 
+ # Bit4id
+ 0x25DD:0x1101:Bit4id miniLector-s
+@@ -213,7 +232,10 @@
+ 0x25DD:0x2351:Bit4id Digital DNA Key
+ 0x25DD:0x2361:Bit4id Digital-DNA Key BT
+ 0x25DD:0x2362:Bit4id Digital-DNA Key
++0x25DD:0x2371:Bit4id TokenME EVO v2
+ 0x25DD:0x3111:Bit4id miniLector
++0x25DD:0x3211:Bit4id miniLector AIR EVO
++0x25DD:0xB001:Bit4id miniLector Blue
+ 
+ # Bluink Ltd.
+ 0x2ABE:0x1003:Bluink Ltd. Bluink CCID
+@@ -227,6 +249,10 @@
+ 0x0A5C:0x5832:Broadcom Corp 5880
+ 0x0A5C:0x5833:Broadcom Corp 5880
+ 0x0A5C:0x5834:Broadcom Corp 5880
++0x0A5C:0x5842:Broadcom Corp 58200
++0x0A5C:0x5843:Broadcom Corp 58200
++0x0A5C:0x5844:Broadcom Corp 58200
++0x0A5C:0x5845:Broadcom Corp 58200
+ 
+ # C3PO
+ 0x0783:0x0007:C3PO TLTC2USB
+@@ -240,6 +266,10 @@
+ # CCB
+ 0x8829:0xCCB2:CCB eSafeLD
+ 
++# Certgate GmbH
++0x2DFF:0xB601:Certgate GmbH AirID 2 USB
++0x2DFF:0xB602:Certgate GmbH ONEKEY ID 2 USB
++
+ # charismathics
+ 0x19E7:0x0002:charismathics plug'n'crypt CCID token
+ 
+@@ -257,6 +287,7 @@
+ 0x046A:0x005B:Cherry GmbH SmartBoard XX1X
+ 0x046A:0x0070:Cherry GmbH SmartTerminal XX1X
+ 0x046A:0x0072:Cherry GmbH SmartTerminal ST-1275
++0x046A:0x01A2:Cherry GmbH CHERRY SECURE BOARD 1.0
+ 
+ # Chicony
+ 0x04F2:0x0967:Chicony USB Smart Card Keyboard
+@@ -268,6 +299,15 @@
+ 0x0982:0x0008:COVADIS VEGA-ALPHA
+ 0x0982:0x0040:COVADIS Auriga
+ 
++# DC.Ltd
++0x257B:0xC305:DC.Ltd DC4 5CCID READER
++
++# Doctolib
++0x1C34:0xAFD0:Doctolib SR
++0x1C34:0xAFD1:Doctolib SR
++0x1C34:0xAFD2:Doctolib SR
++0x1C34:0xAFD3:Doctolib SR
++
+ # DUALi
+ 0x1DB2:0x0801:DUALi DE-620 Combi
+ 0x1DB2:0x088B:DUALi DRAGON NFC READER
+@@ -282,6 +322,9 @@
+ # ESMART
+ 0x2CE4:0x7479:ESMART Token GOST
+ 
++# F-Secure Foundry
++0x1209:0x2702:F-Secure Foundry USB Armory Mk II
++
+ # FEITIAN
+ 0x096E:0x0619:FEITIAN iR301
+ 0x096E:0x061A:FEITIAN bR301
+@@ -326,6 +369,7 @@
+ 0x08E6:0x3440:GEMALTO CT1100
+ 
+ # Gemalto
++0x0898:0x0101:Gemalto RF CR5400
+ 0x08E6:0x2202:Gemalto Gem e-Seal Pro USB Token
+ 0x08E6:0x34C1:Gemalto Ezio Shield Secure Channel
+ 0x08E6:0x34C2:Gemalto Ezio Shield
+@@ -345,6 +389,10 @@
+ # Generic USB
+ 0x076B:0x3A21:Generic USB Smart Card Reader
+ 
++# Genesys Logic
++0x05E3:0x0757:Genesys Logic CCID Card Reader
++0x05E3:0x0758:Genesys Logic Combo Card Reader
++
+ # German Privacy Foundation
+ 0x20A0:0x4107:German Privacy Foundation Crypto Stick v1.2
+ 
+@@ -371,6 +419,10 @@
+ # HID
+ 
+ # HID Global
++0x09C3:0x0028:HID Global Crescendo Key
++0x09C3:0x0029:HID Global Crescendo Key
++0x09C3:0x002B:HID Global Crescendo Key
++0x09C3:0x002D:HID Global Crescendo Key
+ 0x076B:0x3031:HID Global OMNIKEY 3x21 Smart Card Reader
+ 0x076B:0x5022:HID Global OMNIKEY 5022 Smart Card Reader
+ 0x076B:0x5023:HID Global OMNIKEY 5023 Smart Card Reader
+@@ -409,6 +461,7 @@
+ 0x04E6:0x581A:Identiv uTrust 3522 embd SE RFID Token
+ 0x04E6:0x581B:Identiv uTrust 2910 R Taglio SC Reader
+ 0x04E6:0x581C:Identiv SCR35xx USB Smart Card Reader
++0x04E6:0x581D:Identiv SCR3500 C Contact Reader
+ 
+ # Identive
+ 0x04E6:0x5710:Identive CLOUD 2700 F Smart Card Reader
+@@ -428,8 +481,12 @@
+ 0x03EB:0x9308:IIT E.Key Crystal-1
+ 0x03EB:0x9324:IIT E.Key Almaz-1C
+ 
++# InfoCert
++0x2FD2:0x0100:InfoCert WirelessKey
++
+ # InfoThink
+ 0x1FC9:0x0102:InfoThink IT-102MU Reader
++0x1403:0x7506:InfoThink IT-500U Reader
+ 
+ # Inside Secure
+ 0x2406:0x6300:Inside Secure VaultIC 420 Smart Object
+@@ -475,6 +532,7 @@
+ 
+ # Ledger
+ 0x2C97:0x0001:Ledger Nano S
++0x2C97:0x0004:Ledger Nano X
+ 
+ # Lenovo
+ 0x17EF:0x6007:Lenovo Lenovo USB Smartcard Keyboard
+@@ -526,6 +584,7 @@
+ # NXP
+ 0x1FC9:0x0107:NXP Pegoda 2 N
+ 0x1FC9:0x010B:NXP PR533
++0x1FC9:0x0117:NXP PN7462AU CCID
+ 
+ # OBERTHUR TECHNOLOGIES
+ 0x1A74:0xB111:OBERTHUR TECHNOLOGIES ID-ONE TOKEN SLIM v2
+@@ -563,6 +622,9 @@
+ # Planeta
+ 0x21AB:0x0010:Planeta RC700-NFC CCID
+ 
++# Purism, SPC
++0x316D:0x4C4B:Purism, SPC Librem Key
++
+ # Raritan
+ 0x14DD:0x1006:Raritan D2CIM-DVUSB VM/CCID
+ 
+@@ -579,6 +641,9 @@
+ # Rocketek
+ 0x14CD:0x8166:Rocketek RT-SCR1
+ 
++# Route1
++0x13FE:0xC831:Route1 MobiKEY Fusion3
++
+ # SafeNet
+ 0x0529:0x0602:SafeNet eToken 7300
+ 0x0529:0x0620:SafeNet eToken 5100
+@@ -618,7 +683,21 @@
+ # Softforum Co., Ltd
+ 0x04E8:0x0007:Softforum Co., Ltd XecureHSM
+ 
++# SPECINFOSYSTEMS
++0x316E:0x0001:SPECINFOSYSTEMS DIAMOND token
++0x316E:0x0002:SPECINFOSYSTEMS DIAMOND PRO token
++0x316E:0x0003:SPECINFOSYSTEMS DIAMOND PLUS token
++0x316E:0x0010:SPECINFOSYSTEMS DIAMOND HSM
++
+ # SpringCard
++0x1C34:0x6012:SpringCard SpringCore
++0x1C34:0x601A:SpringCard SpringCore
++0x1C34:0x6112:SpringCard E518
++0x1C34:0x611A:SpringCard E518
++0x1C34:0x6122:SpringCard H518
++0x1C34:0x612A:SpringCard H518
++0x1C34:0x6132:SpringCard Puck
++0x1C34:0x613A:SpringCard Puck
+ 0x1C34:0x7113:SpringCard CrazyWriter
+ 0x1C34:0x7121:SpringCard CSB6 Basic
+ 0x1C34:0x7123:SpringCard CSB6 Secure
+@@ -633,11 +712,15 @@
+ # Spyrus Inc
+ 0x08DF:0x0004:Spyrus Inc Rosetta USB
+ 0x08DF:0x3115:Spyrus Inc WorkSafe Pro
++0x08DF:0x3117:Spyrus Inc WorkSafe Pro
+ 0x08DF:0x3201:Spyrus Inc PocketVault P-3X
+ 
+ # SYNNIX
+ 0x1206:0x2105:SYNNIX STD200
+ 
++# Sysking
++0x0E6A:0x5083:Sysking MII136C
++
+ # Teridian Semiconductors
+ 0x1862:0x0000:Teridian Semiconductors TSC12xxFV.09
+ 
+@@ -858,6 +941,7 @@
+ #0x076B:0xA022:XIRING Teo (Teo.txt)
+ 
+ #0x08E6:0x3437:Gemalto PC Twin Reader (GemPCTwin.txt)
++#0x08E6:0x3437:Gemalto PC Twin Reader (serial) (GemPCTwinSerial.txt)
+ #0x08E6:0x3437:Gemalto IDBridge CT30 (Gemalto_IDBridge_CT30.txt)
+ #0x08E6:0x3437:Gemalto K50 (Gemalto_K50.txt)
+ 
