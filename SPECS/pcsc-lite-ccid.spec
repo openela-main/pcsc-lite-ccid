@@ -2,8 +2,8 @@
 %global pcsc_lite_ver 1.8.9
 
 Name:           pcsc-lite-ccid
-Version:        1.4.36
-Release:        2%{?dist}
+Version:        1.5.2
+Release:        1%{?dist}
 Summary:        Generic USB CCID smart card reader driver
 
 License:        LGPLv2+
@@ -13,8 +13,6 @@ Source1:        https://ccid.apdu.fr/files/ccid-%{version}.tar.bz2.asc
 Source2:        gpgkey-F5E11B9FFE911146F41D953D78A1B4DFE8F9C57E.gpg
 Patch0:         ccid-1.4.26-omnikey-3121.patch
 Patch1:         ccid-1.4.34-maxreaders.patch
-Patch2:         ccid-1.4.36-etoken.patch
-Patch3:         ccid-1.4.36-alcor-micro.patch
 
 BuildRequires: make
 BuildRequires:  perl-interpreter
@@ -42,8 +40,6 @@ gpgv2 --keyring %{SOURCE2} %{SOURCE1} %{SOURCE0}
 %setup -q -n ccid-%{version}
 %patch0 -p1 -b .omnikey
 %patch1 -p0 -b .maxreaders
-%patch2 -p1 -b .etoken
-%patch3 -p1 -b .alcor-micro
 
 %build
 %configure --enable-twinserial
@@ -71,8 +67,8 @@ cp -p src/openct/LICENSE LICENSE.openct
 
 
 %changelog
-* Fri Jun 09 2023 Jakub Jelen <jjelen@redhat.com> - 1.4.36-2
-- Do not use high speeds when communicating with Alcor Micro AU9560 (#2213827)
+* Thu Jun 8 2023 Jakub Jelen <jjelen@redhat.com> - 1.5.2-1
+- Rebase to current version from Fedora to fix support for Alcor Micro Corp. AU9540 (#2209457)
 
 * Thu Nov 18 2021 Jakub Jelen <jjelen@redhat.com> - 1.4.36-1
 - Rebase to current version from Fedora (#2017830)

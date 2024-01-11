@@ -23,7 +23,7 @@ diff -up ccid-1.4.26/src/ccid.h.omnikey ccid-1.4.26/src/ccid.h
 +++ ccid-1.4.26/src/ccid.h	2017-02-24 10:04:25.742132234 +0100
 @@ -137,6 +137,7 @@ typedef struct
  	 */
- 	char zlp;
+ 	bool zlp;
  #endif
 +	unsigned int dwNonStandardFlags;
  } _ccid_descriptor;
